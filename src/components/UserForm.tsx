@@ -5,7 +5,7 @@ type userFormProps = {
 };
 
 const UserForm: React.FC<userFormProps> = ({ onSubmit }) => {
-  const [name, setName] = useState('anonymous');
+  const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [isError, setIsError] = useState(false);
 
@@ -17,7 +17,10 @@ const UserForm: React.FC<userFormProps> = ({ onSubmit }) => {
       return;
     }
 
-    onSubmit(name, message);
+    onSubmit(name || 'anonymous', message);
+
+    setName('');
+    setMessage('');
   };
 
   return (

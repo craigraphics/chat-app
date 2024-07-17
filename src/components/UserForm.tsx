@@ -29,7 +29,7 @@ const UserForm: React.FC<userFormProps> = ({ onSubmit }) => {
         <div className="mb-2">
           <label className="block text-gray-200 text-sm font-bold mb-2">Name</label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             type="text"
             value={name}
@@ -41,7 +41,7 @@ const UserForm: React.FC<userFormProps> = ({ onSubmit }) => {
         <div className="mb-2">
           <label className="block text-gray-200 text-sm font-bold mb-2">Message</label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
